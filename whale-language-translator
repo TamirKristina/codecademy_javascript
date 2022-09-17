@@ -1,0 +1,20 @@
+let input = "I love you so much, my little baby squish";
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+let resultArray = [];
+
+for (i = 0; i < input.length; i++) {
+  if (input[i] === 'e' || input[i] === 'u') {
+    resultArray.push(input[i]);
+  } 
+  for (j = 0; j < vowels.length; j++) {
+    if (input[i] === vowels[j]) {
+      resultArray.push(input[i]);
+    }
+    // console.log("j is " + [j]);
+  }
+  // console.log("i is " + [i]);
+}
+
+// console.log(resultArray);
+const resultString = resultArray.join(' ').toUpperCase();
+console.log(resultString);
