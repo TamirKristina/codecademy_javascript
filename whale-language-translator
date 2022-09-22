@@ -1,4 +1,6 @@
+// Original sentence to be translated
 let input = "I love you so much, my little baby squish";
+
 const vowels = ['a', 'e', 'i', 'o', 'u'];
 let resultArray = [];
 
