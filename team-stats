@@ -1,0 +1,14 @@
+const team = {
+  _players: {
+    playerOne: {firstName: firstName, lastName: lastName, age: age},
+    playerTwo: {firstName: firstName, lastName: lastName, age: age},
+    playerThree: {firstName: firstName, lastName: lastName, age: age}
+  },
+  _games: {
+    gameOne: {opponent: opponent, teamPoints: teamPoints, opponentPoints: opponentPoints},
+    gameTwo: {opponent: opponent, teamPoints: teamPoints, opponentPoints: opponentPoints},
+    gameThree: {opponent: opponent, teamPoints: teamPoints, opponentPoints: opponentPoints}
+  }
+};
+
+console.log(team._players);
