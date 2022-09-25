@@ -1,14 +1,32 @@
 const team = {
-  _players: {
-    playerOne: {firstName: firstName, lastName: lastName, age: age},
-    playerTwo: {firstName: firstName, lastName: lastName, age: age},
-    playerThree: {firstName: firstName, lastName: lastName, age: age}
+  _players: [
+    {firstName: 'Nadya', lastName: 'Borno', age: 29},
+    {firstName: 'Bayley', lastName: 'True', age: 25},
+    {firstName: 'Hugo', lastName: 'Santini', age: 27},
+  ],
+  _games: [
+    {opponent: 'Hector', teamPoints: 5, opponentPoints: 3},
+    {opponent: 'David', teamPoints: 12, opponentPoints: 20},
+    {opponent: 'Phil', teamPoints: 22, opponentPoints: 16}
+  ],
+  get players() {
+    return this._players;
   },
-  _games: {
-    gameOne: {opponent: opponent, teamPoints: teamPoints, opponentPoints: opponentPoints},
-    gameTwo: {opponent: opponent, teamPoints: teamPoints, opponentPoints: opponentPoints},
-    gameThree: {opponent: opponent, teamPoints: teamPoints, opponentPoints: opponentPoints}
+  get games() {
+    return this._games;
+  },
+  addPlayer(newFirstName, newLastName, newAge) {
+    let player = {firstName: newFirstName, lastName: newLastName, age: newAge};
+    this._players.push(player);
+  },
+  addGame(newOpponent, newTeamPoints, newOpponentPoints) {
+    let game = {opponent: newOpponent, teamPoints: newTeamPoints, opponentPoints: newOpponentPoints};
+    this._games.push(game);
   }
-};
+}
 
-console.log(team._players);
+team.addPlayer('Sarah', 'Huff', 30);
+team.addGame('Orlando Magic', 49, 30);
+
+console.log(team.players);
+console.log(team.games);
