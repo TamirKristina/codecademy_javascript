@@ -1,0 +1,32 @@
+// Meal array
+const menu = {
+  _meal: ' ',
+  _price: 0,
+  // Checks that _meal variable is a string
+  set meal(mealToCheck) {
+    if(typeof mealToCheck === 'string') {
+      return this._meal;
+      }
+    },
+   // Check that _price is a number
+  set price(priceToCheck) {
+    if(typeof priceToCheck === 'number') {
+      return this._price;
+      } 
+    },
+   // Checks that values are filled in and returns today's special 
+  get todaysSpecial() {
+    if(this._meal && this._price) {
+      return "Today's special is " + this._menu + " for $" + this._price + " !";
+      } else {
+        return "Meal or price was not set correctly";
+      }
+    }
+  }
+
+// Variable assignment
+menu._meal = 'Italian';
+menu._price = 25;
+
+// Logs today's special
+console.log(menu.todaysSpecial);
